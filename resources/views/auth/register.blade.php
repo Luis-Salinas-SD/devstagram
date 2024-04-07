@@ -39,9 +39,9 @@ Registrate
             </div>
 
             <div class="mb-5">
-                <label for="pwd" class="mb-2 block uppercase text-gray-500 font-bold">Password</label>
-                <input type="password" id="pwd" name="pwd" placeholder="**********" class=" border p-2 w-full rounded-lg @error('pwd') border-red-500 @enderror" value="{{old('pwd')}}">
-                    @error('pwd')
+                <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">Password</label>
+                <input type="password" id="pwd" name="password" placeholder="**********" class=" border p-2 w-full rounded-lg @error('password') border-red-500 @enderror" value="{{old('password')}}">
+                    @error('password')
                     <p class="bg-red-400 text-white text-center p-1 my-2 rounded-lg">{{$message}}</p>
                     @enderror
             </div>
