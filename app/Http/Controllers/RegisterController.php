@@ -9,24 +9,25 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
-    //Método index
+    //! Método index
     public function index()
     {
         return view('auth.register');
     }
 
-    //Método store para la validación de los campos del formulario
+    //! Método store para la validación de los campos del formulario
     public function store(Request $request)
     {
         //% Validación del Form de registro
         $this->validate($request, [
-            'name' => 'required|min:5',
-            'username' => 'required|unique:users|min:5|max:7',
-            'email' => 'required|email|unique:users|max:20',
+            'name' => 'required|min:4',
+            'username' => 'required|unique:users|min:4|max:7',
+            'email' => 'required|email|unique:users|max:40',
             'password' => 'required|confirmed|min:8'
         ]);
         //mostrar  el nombre y el usuario en un mensaje flash
         //dd('Generando usuario '. 'Nombre: '. $request->name . ' '. 'Usuario: '. $request->username);
+        //dd($request);
 
         //Modelo User
         User::create([
