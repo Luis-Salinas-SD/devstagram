@@ -10,8 +10,6 @@
     @vite('resources/css/app.css')
     @vite('resources/css/stylesls.css')
 
-
-
 </head>
 
 <body class="bg-gray-100">
