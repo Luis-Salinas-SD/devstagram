@@ -22,11 +22,7 @@ class RegisterController extends Controller
         $this->validate($request, [
             'name' => 'required|min:4',
             'username' => 'required|unique:users|min:4|max:7',
-<<<<<<< HEAD
             'email' => 'required|email|unique:users|max:30',
-=======
-            'email' => 'required|email|unique:users|max:40',
->>>>>>> ba8d1c45c9e03e83f8fea665c4c233b2470eb819
             'password' => 'required|confirmed|min:8'
         ]);
         //mostrar  el nombre y el usuario en un mensaje flash
